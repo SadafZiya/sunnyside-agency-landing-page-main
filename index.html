@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main-content">
+      <header class="header" id="header">
+        <navbar class="menubar">
+          <img src="images/logo.svg" onclick="gotToHomePage(event)" />
+          <menu id="menu-desktop">
+            <a href="#about" id="desktop-about" onclick="selectMenu(event)"
+              >About</a
+            >
+            <a
+              href="#services"
+              id="desktop-services"
+              onclick="selectMenu(event)"
+              >Services</a
+            >
+            <a
+              href="#projects"
+              id="desktop-projects"
+              onclick="selectMenu(event)"
+              >Projects</a
+            >
+            <a href="#contact" id="desktop-contact" onclick="selectMenu(event)"
+              >Contact</a
+            >
+          </menu>
+          <menu id="menu-mobile">
+            <img src="images/icon-hamburger.svg" onclick="openMenu()" />
+            <div id="ham-menu">
+              <div>
+                <a href="#about" id="mobile-about" onclick="selectMenu(event)"
+                  >About</a
+                >
+              </div>
+              <div>
+                <a
+                  href="#services"
+                  id="mobile-services"
+                  onclick="selectMenu(event)"
+                  >Services</a
+                >
+              </div>
+              <div>
+                <a
+                  href="#projects"
+                  id="mobile-projects"
+                  onclick="selectMenu(event)"
+                  >Projects</a
+                >
+              </div>
+              <div>
+                <a
+                  href="#contact"
+                  id="mobile-contact"
+                  onclick="selectMenu(event)"
+                  >Contact</a
+                >
+              </div>
+            </div>
+          </menu>
+        </navbar>
+        <img
+          class="desktop-image"
+          id="header-img"
+          src="images/desktop/image-header.jpg"
+        />
+        <img
+          class="mobile-image"
+          id="header-img"
+          src="images/mobile/image-header.jpg"
+        />
+        <div class="heading">
+          <h1>WE ARE CREATIVES</h1>
+          <img src="images/icon-arrow-down.svg" />
+        </div>
+      </header>
+
+      <section class="first-section">
+        <div class="learn-more-card left-card inner-section">
+          <h2>Transform your brand</h2>
+          <p>
+            We are full-service creative agency apecializing in<br />
+            helping brands grow fast. Engage your clients through<br />
+            compelling visuals that do most of the marketing for you.
+          </p>
+          <span>LEARN MORE</span>
+          <div class="text-marker"></div>
+        </div>
+        <img
+          class="desktop-image inner-section"
+          src="images/desktop/image-transform.jpg"
+        />
+        <img
+          class="mobile-image inner-section"
+          src="images/mobile/image-transform.jpg"
+        />
+      </section>
+      <section class="second-section">
+        <img
+          class="desktop-image inner-section"
+          src="images/desktop/image-stand-out.jpg"
+        />
+        <img
+          class="mobile-image inner-section"
+          src="images/mobile/image-stand-out.jpg"
+        />
+        <div class="learn-more-card right-card inner-section">
+          <h2>Stand out to the right audience</h2>
+          <p>
+            Using collaborative formula of designers, researchers,<br />
+            photographers, videographer, and copywriters, we'll<br />
+            build and extend your brand in digital places.
+          </p>
+          <span>LEARN MORE</span>
+          <div class="text-marker"></div>
+        </div>
+      </section>
+      <section class="third-section">
+        <div class="inner-section">
+          <img
+            class="desktop-image"
+            src="images/desktop/image-graphic-design.jpg"
+          />
+          <img
+            class="mobile-image"
+            src="images/mobile/image-graphic-design.jpg"
+          />
+          <div class="third-inner third-design">
+            <h2>Graphic Design</h2>
+            <p>
+              Great design makes you memorable. We deliver <br />
+              artwork that underscores your brand message<br />
+              and captures potential clients' attention.
+            </p>
+          </div>
+        </div>
+        <div class="inner-section">
+          <img
+            class="desktop-image"
+            src="images/desktop/image-photography.jpg"
+          />
+          <img class="mobile-image" src="images/mobile/image-photography.jpg" />
+          <div class="third-inner third-photography">
+            <h2>Photography</h2>
+            <p>
+              Increase your credibility by getting the most<br />
+              stunning, high-quality photos that improve your<br />
+              business image.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="forth-section">
+        <div class="forth-header">
+          <h2>CLIENT TESTIMONIALS</h2>
+        </div>
+        <div class="testimonial-list">
+          <div class="testimonial-item">
+            <img src="images/image-jennie.jpg" />
+            <p>
+              Incredible end result! Our sales Increased over 400% when we
+              workeed with Sunnyside. Highly recommended!
+            </p>
+            <strong>Jennie F.</strong>
+            <span>Business Owner</span>
+          </div>
+          <div class="testimonial-item">
+            <img src="images/image-thomas.jpg" />
+            <p>
+              Sunnyside's enthusiasm coupled with their keen interest in our
+              brand's success made it a satisfying and enjoyable experience.
+            </p>
+            <strong>Thomas S.</strong>
+            <span>Chief Operating Officer</span>
+          </div>
+          <div class="testimonial-item">
+            <img src="images/image-emily.jpg" />
+            <p>
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <strong>Emily R.</strong>
+            <span>marketing Director</span>
+          </div>
+        </div>
+      </section>
+      <section class="fifth-section">
+        <img
+          class="desktop-image"
+          src="images/desktop/image-gallery-milkbottles.jpg"
+        />
+        <img
+          class="desktop-image"
+          src="images/desktop/image-gallery-orange.jpg"
+        />
+        <img
+          class="desktop-image"
+          src="images/desktop/image-gallery-cone.jpg"
+        />
+        <img
+          class="desktop-image"
+          src="images/desktop/image-gallery-sugarcubes.jpg"
+        />
+
+        <img
+          class="mobile-image"
+          src="images/mobile/image-gallery-milkbottles.jpg"
+        />
+        <img
+          class="mobile-image"
+          src="images/mobile/image-gallery-orange.jpg"
+        />
+        <img class="mobile-image" src="images/mobile/image-gallery-cone.jpg" />
+        <img
+          class="mobile-image"
+          src="images/mobile/image-gallery-sugarcubes.jpg"
+        />
+      </section>
+
+      <footer class="footer">
+        <img
+          id="footer-logo"
+          src="images/logo.svg"
+          onclick="gotToHomePage(event)"
+        />
+        <div class="menu-footer">
+          <a href="#about" id="desktop-about" onclick="selectMenu(event)"
+            >About</a
+          >
+          <a href="#services" id="desktop-services" onclick="selectMenu(event)"
+            >Services</a
+          >
+          <a href="#projects" id="desktop-projects" onclick="selectMenu(event)"
+            >Projects</a
+          >
+        </div>
+        <div class="footer-social">
+          <img src="images/icon-facebook.svg" />
+          <img src="images/icon-twitter.svg" />
+          <img src="images/icon-instagram.svg" />
+          <img src="images/icon-pinterest.svg" />
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>
