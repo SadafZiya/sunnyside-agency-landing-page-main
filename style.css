@@ -89,12 +89,20 @@ body {
   font-size: 20px;
   font-weight: 700;
 }
+.menu-footer a:hover,
+.menu-footer .active-menu {
+  color: white;
+}
 .menu-footer {
   padding-bottom: 40px;
 }
 .footer-social img {
+  cursor: pointer;
   filter: grayscale(1) sepia(1) hue-rotate(168deg) saturate(40) brightness(0.35);
   padding: 0px 10px;
+}
+.footer-social img:hover {
+  filter: invert(1) brightness(1000%);
 }
 .footer-social {
   padding: 20px 0 40px 0;
@@ -107,7 +115,12 @@ body {
   font-weight: 700;
 }
 
-#menu-desktop a:hover,
+#menu-desktop a:hover {
+  background-color: hsl(200.42deg 100% 71.76%);
+  color: white;
+  border-radius: 25px;
+  font-family: Fraunces;
+}
 #menu-desktop .active-menu {
   color: black;
   background-color: white;
@@ -174,10 +187,10 @@ body {
   border-radius: 3px;
 }
 .right-card .text-marker div {
-  background-color: hsl(7, 99%, 70%);
+  background-color: hsla(7, 99%, 70%, 0.39);
 }
 .left-card .text-marker div {
-  background-color: hsl(51, 100%, 49%);
+  background-color: hsla(51, 100%, 49%, 0.39);
 }
 .learn-more-card h2 {
   font-size: 2em;
@@ -193,7 +206,14 @@ body {
   font-size: 14px;
   padding-top: 30px;
   display: block;
-  width: auto;
+  width: fit-content;
+  cursor: pointer;
+}
+.learn-more-card.right-card span:hover ~ .text-marker div {
+  background-color: hsl(7, 99%, 70%);
+}
+.learn-more-card.left-card span:hover ~ .text-marker div {
+  background-color: hsl(51, 100%, 49%);
 }
 .forth-section {
   flex-direction: column;
@@ -258,6 +278,7 @@ body {
 
 .inner-section {
   width: 50%;
+  max-width: 50%;
   object-fit: cover;
   flex: 1 1 200px;
 }
@@ -432,13 +453,6 @@ body {
     display: block;
   }
 
-  .learn-more-card {
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    text-align: left;
-    margin: auto;
-  }
   .left-card {
     box-shadow: unset;
   }
@@ -459,11 +473,19 @@ body {
     padding: 50px 50px 50px 50px;
     line-height: 25px;
     font-size: 17px;
+    max-width: 100%;
   }
+  .learn-more-card span {
+    width: auto;
+  }
+
   .text-marker {
     justify-items: center;
   }
-
+  .text-marker div {
+    margin: auto;
+    margin-top: -10px;
+  }
   .forth-section {
     flex-direction: column;
     padding: 50px 10px 50px 10px;

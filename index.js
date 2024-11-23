@@ -1,9 +1,10 @@
-let desktopMenu = document.getElementById("desktop-menu");
-let mobileMenu = document.getElementById("mobile-menu"); 
-
 function openMenu() {
-  let hamMenu = document.getElementById("ham-menu"); 
-  if (hamMenu.style.display == "" || hamMenu.style.display == null || hamMenu.style.display == "none")
+  let hamMenu = document.getElementById("ham-menu");
+  if (
+    hamMenu.style.display == "" ||
+    hamMenu.style.display == null ||
+    hamMenu.style.display == "none"
+  )
     hamMenu.style.display = "block";
   else hamMenu.style.display = "none";
 }
@@ -12,6 +13,7 @@ function selectMenu(event) {
   id = event.target.id.split("-")[1];
   document.getElementById(`mobile-${id}`).classList.add("active-menu");
   document.getElementById(`desktop-${id}`).classList.add("active-menu");
+  document.getElementById(`footer-${id}`).classList.add("active-menu");
 }
 function gotToHomePage(event) {
   removeActiveMenu();
@@ -25,5 +27,8 @@ function removeActiveMenu() {
   const menuMobItems = document.querySelectorAll("#menu-mobile a");
   menuMobItems.forEach((item) => item.classList.remove("active-menu"));
 
+  const menuFooterItems = document.querySelectorAll(".menu-footer a");
+  menuFooterItems.forEach((item) => item.classList.remove("active-menu"));
+
   document.getElementById("ham-menu").style.display = "none";
-} 
+}
