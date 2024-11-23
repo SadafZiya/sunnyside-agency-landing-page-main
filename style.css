@@ -27,9 +27,6 @@ body {
   width: 100%;
   max-width: 1440px;
 }
-#header-img {
-  width: 100%;
-}
 #header .heading {
   position: absolute;
   text-align: center;
@@ -155,6 +152,7 @@ body {
 }
 .desktop-image {
   display: block;
+  width: 100%;
 }
 .mobile-image {
   display: none;
